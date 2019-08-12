@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+
+.navMenu{
+  display: flex;
+  list-style-type: none;
+}
+
+.navMenu li{
+ margin:0px 10px;
+}
+

@@ -1,3 +1,188 @@
 .taskfour_wrapper{
+    width:100%;
+    height:450px;
+}
 
+.taskfour_wrapper>.content{
+    width: 100%;
+    height: 100%;
+    background: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal{
+    width: 900px;
+    height:350px;
+    background: white;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+}
+.modal>h4{
+    color:grey;
+    margin: 0px 0px 25px;
+}
+
+.calendar{
+    width:100%;
+    height:auto;
+    border: 2px solid grey;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    border-bottom:  2px solid grey;
+}
+
+.row.empty{
+    
+    border-bottom:  none;
+}
+
+.row.empty>.title{
+    background: none;
+}
+.row.empty .slot{
+    font-size: 10px;
+}
+
+.row>.title{
+    width: 120px;
+    background: lightgrey;
+    padding: 5px;
+    font-size: 14px;
+    color: grey;
+}
+
+.row>.slots{
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    width:100%;
+    
+}
+.slots>.slot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    font-size: 12px;
+    text-align: center;
+    padding: 3px;
+    position: relative;
+}
+.slot>.content{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+}
+.content>.intervalMark{
+   font-weight: bold;
+   color: green; 
+   
+}
+
+.content>.stopMark{
+    display: block;
+    width:20px;
+    height: 20px;
+    border-radius:50%;
+    background-color: red;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+   
+    
+    
+}
+
+.content>.emptyMark{
+    display: block;
+    width:20px;
+    height: 20px;
+    border-radius:50%;
+    background-color: none;
+  
+}
+
+
+
+.content>.emptyMark:hover, .content>.emptyMark.clicked{
+    background-color: blue;
+     opacity: 0.3;
+ }
+
+.content>.startMark{
+    width:20px;
+    height: 20px;
+    border-radius:50%;
+    background-color: green;
+    color: white;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+   font-size: 10px;
+  
+    
+}
+.popup{
+    position:absolute;
+    top:100%;
+    width:250px;
+    height:70px;
+    background: white;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    z-index: 1;
+    text-align: left;
+
+}
+
+.popup>.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup>.header>.btns{
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+   
+}
+
+.btns>span{
+    cursor: pointer;
+}
+
+.popup select{
+ width:100%;
+ margin:15px 0px 15px;
+}
+
+.popup .stop-link{
+    cursor: pointer;
+    font-weight: bold;
+    color: green;
 }

@@ -23,10 +23,8 @@ useEffect(() => {
     init();
     animate();
 
-    return () => {
-      
-      }
-}); 
+   
+},[]); 
 
 
 

@@ -30,7 +30,6 @@ const Slot = (props) => {
         var data = e.target.options[e.target.selectedIndex].dataset.i;
        if(data>0){
         props.onIntChange(props.day,props.time,parseInt(data));
-        console.log(parseInt(data));
        }
     }
    

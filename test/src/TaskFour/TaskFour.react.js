@@ -27,13 +27,15 @@ const TaskFour = () => {
     
     var daysData = [];
 
+   
+
     useEffect(() => {
         
       update();
             
-    },[]);
+    },[ints]);
 
-    var update = ()=>{
+    const update = ()=>{
         daysData = [];
 
         var beforeInterval=[0,0]; //"playhead" position before next interval
@@ -45,7 +47,7 @@ const TaskFour = () => {
           
             for(let i=0;i<24;i++){
                 let hour;
-                if(element[0]==i+1){
+                if(element[0]===i+1){
                     if(element[1]>0){
                         hour = element[1];
                         beforeInterval=[hour,hour]
@@ -53,7 +55,7 @@ const TaskFour = () => {
                         hour = "s";
                     }
                 }else{
-                if(element[1]>0||(element[0]==0&&element[1]==0)){ //show day interval only if this day's interval wasn't cancelled
+                if(element[1]>0||(element[0]===0&&element[1]===0)){ //show day interval only if this day's interval wasn't cancelled
                     if(beforeInterval[0]>1){
                         beforeInterval[0]--;
                         hour="";
@@ -71,15 +73,19 @@ const TaskFour = () => {
             setDay(daysData);
     }
 
-    var updateInt=(day,time,length)=>{
+    const updateInt=(day,time,length)=>{
         
     var obj = ints; 
         obj[day][0]=time;
         obj[day][1]=length;
-        console.log(obj)
         setInt(obj);
         update();
         
+    }
+
+    const clear=()=>{
+        setInt([[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]);
+        update();
     }
 
     return (
@@ -121,6 +127,7 @@ const TaskFour = () => {
                             })}
                         </div>
                     </div>
+                    <button onClick={()=>{clear()}}>Clear</button>
             </div>
                 
             </div>

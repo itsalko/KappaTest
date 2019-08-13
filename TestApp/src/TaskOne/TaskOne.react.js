@@ -56,7 +56,7 @@ const TaskOne = () => {
       
             if(getComputedStyle(document.documentElement).getPropertyValue('--tx')==="0"){ //check if initial parameters added to style
                                                                                         //if not - add
-                squareProps.tx.from=e.target.scrollingElement.clientWidth/1.3; 
+                squareProps.tx.from=600; 
 
                 squareProps.tx.now=squareProps.tx.from;
                 squareProps.ty.now=squareProps.ty.from;
@@ -66,7 +66,7 @@ const TaskOne = () => {
              
                
 
-            if(scrollPos>niceEdge/5){  //show square earlier for 50px scroll pos
+            if(scrollPos>niceEdge/5){  //show square earlier 
 
                 var xpos = squareProps.tx.from-(timeline);
                
